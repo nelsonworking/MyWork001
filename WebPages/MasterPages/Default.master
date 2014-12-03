@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="WebPages_MasterPages_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="<%= Page.ResolveUrl("../../Assets/jquery-ui-1.11.2/jquery-ui.min.css")%>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("../../Assets/bootstrap/Content/bootstrap.css")%>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("../../Assets/bootstrap/Content/main.css")%>" rel="stylesheet" type="text/css" />
+    <script src="<%= Page.ResolveUrl("../../Assets/bootstrap/Scripts/jquery-1.10.2.min.js")%>"></script>
+    <script src="<%= Page.ResolveUrl("../../Assets/bootstrap/Scripts/bootstrap.min.js")%>"></script>
+    <script src="<%= Page.ResolveUrl("../../Assets/jquery-ui-1.11.2/jquery-ui.min.js")%>"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="CPH_Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Button ID="Button1" runat="server" Text="Button" Visible="False" />
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">...MyWork001...</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <%--                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Help</a></li>--%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <div class="row placeholders">
+                        <asp:ContentPlaceHolder ID="CPH_Content" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
